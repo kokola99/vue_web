@@ -1,0 +1,156 @@
+<template>
+  <div class="login" clearfix>
+    <div class="login-wrap">
+      <h3><pre><center>登录</center></pre></h3>
+      <el-row type="flex" justify="center">
+        <el-form ref="loginForm" :model="user" :rules="rules" status-icon label-width="80px">
+          <el-form-item prop="username" label="账号">
+            <el-input prefix-icon="iconfont iconyonghu" v-model="user.username" placeholder="请输入账号" ></el-input>
+          </el-form-item>
+          <el-form-item id="password" prop="password" label="密码">
+            <el-input prefix-icon="iconfont iconmima" v-model="user.password" show-password placeholder="请输入密码"></el-input>
+          </el-form-item>
+          <el-button type="primary" icon="el-icon-upload" @click="doLogin()">登 录</el-button>
+          <el-form-item>
+          <router-link to="/register"> 注册账号 </router-link>
+          <span>|</span>
+          <router-link to="/"> 忘记密码 </router-link>
+          </el-form-item>
+        </el-form>
+      </el-row>
+    </div>
+  </div>
+</template>
+<script>
+import axios from "axios";//通过axios进行http请求
+export default {
+  name: "login",
+  data() {
+    return {
+      user: {
+        username: "",
+        password: ""
+      }  
+    };
+  },
+  created() {},
+  methods: {
+    doLogin() {
+      if (!this.user.username) {
+        this.$message.error("请输入账号！");
+        return;
+      } else if (!this.user.password) {
+        this.$message.error("请输入密码！");
+        return;
+      } else {
+        //校验用户名和密码是否正确;
+        //this.$router.push({ path: "/personal" });
+        axios
+          .post("/login/", {
+            name: this.user.username,
+            password: this.user.password
+          })
+          .then(res => {
+            // console.log("输出response.data.status", res.data.status);
+            if (res.data.status === 200) {
+              this.$router.push({ path: "/personal" });
+            } else {
+              alert("您输入的账号或密码错误！");
+            }
+          });
+      }
+    }
+  }
+};
+</script>
+ 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.login {
+  width: 100%;
+  height: 740px;
+  background: url("../assets/images/bg1.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.login-wrap {
+  background: url("../assets/images/login_bg.png") no-repeat;
+  background-size: cover;
+  width: 410px;
+  height: 340px;
+  margin: 215px auto;
+  overflow: hidden;
+  padding-top: 5px;
+  line-height: 40px;
+}
+#password {
+  margin-bottom: 10px;
+}
+h3 {
+  color: #000000b8;
+  font-size: 24px;
+  margin-top: 37px;
+}/*登陆注册标题，后续可以换成其他文字*/
+span{
+  color: #bfbfbf;/*注册账号和忘记密码中间的竖线*/
+}
+a {
+  text-decoration: none;
+  color: #3962d6;
+  font-size: 13px;  /*注册账号找回密码*/
+}
+a:hover {
+  color: #fa174f;/*鼠标悬浮在链接内容上时的颜色*/
+}
+form {
+    display: block;
+    margin-top: 10px;
+}
+.el-button--primary {
+    color: #FFF;
+    background-color: #3962d6;
+    border-color: #3962d6;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.el-form-item {
+    margin-bottom: 0px;
+}
+.el-button {
+  width: 100%;
+  margin-left: 2px;
+}
+</style>
+<style>
+.el-input__inner {
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 0px;
+    border: 1px solid #DCDFE6;
+    font-size:0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+}/*输入框属性*/
+.el-form-item__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: #606266;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+</style>
