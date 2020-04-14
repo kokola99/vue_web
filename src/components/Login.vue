@@ -3,7 +3,7 @@
     <div class="login-wrap">
       <h3><pre><center>登录</center></pre></h3>
       <el-row type="flex" justify="center">
-        <el-form ref="loginForm" :model="user" :rules="rules" status-icon label-width="80px">
+        <el-form ref="loginForm" :model="user" :rules="loginrules" status-icon label-width="80px">
           <el-form-item prop="username" label="账号">
             <el-input prefix-icon="iconfont iconyonghu" v-model="user.username" placeholder="请输入账号" ></el-input>
           </el-form-item>
@@ -27,10 +27,23 @@ export default {
   name: "login",
   data() {
     return {
+      //登陆表单的数据绑定对象
       user: {
         username: "",
         password: ""
-      }  
+      },
+      loginrules: {
+        //验证账号是否合法
+        username: [
+          { required: true, message: '请输入账号', trigger: 'blur' },
+          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+        ],
+        //验证密码是否合法
+        password: [
+          { required: true, message: '请输入密码', trigger: 'blur' },
+          { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+        ]
+      }
     };
   },
   created() {},
@@ -44,7 +57,7 @@ export default {
         return;
       } else {
         //校验用户名和密码是否正确;
-        //this.$router.push({ path: "/personal" });
+        this.$router.push({ path: "/personal" });
         axios
           .post("/login/", {
             name: this.user.username,
@@ -110,11 +123,12 @@ form {
     color: #FFF;
     background-color: #3962d6;
     border-color: #3962d6;
-    margin-top: 20px;
+    margin-top: 13px;
     margin-bottom: 8px;
+    text-align:center;
 }
 .el-form-item {
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 .el-button {
   width: 100%;
