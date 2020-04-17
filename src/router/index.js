@@ -4,6 +4,7 @@ import Personal from '../components/Personal.vue'
 import Personal0 from '../components/Personal0.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue' 
+import Join from'../components/Join.vue'
 Vue.use(Router) 
 export default new Router({
   routes: [
@@ -28,6 +29,11 @@ export default new Router({
       path: '/personal0',
       name: 'Personal0',
       component: Personal0
+    },
+    {
+      path:'/join',
+      name:'Join',
+      component:Join
     }
   ],
   //mode: "history",
