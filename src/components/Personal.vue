@@ -29,7 +29,7 @@
                 </el-submenu>
             </el-submenu>
             <!--<el-menu-item index="3" disabled></el-menu-item>-->
-            <el-menu-item index="3"><a href="https://www.baidu.com" target="_blank">我的项目</a></el-menu-item>
+            <el-menu-item index="3"><a href="Join.vue" target="_blank">我的项目</a></el-menu-item>
         </el-menu>
         <el-button type="info" @click="logout">退出登录</el-button>
         </el-header>

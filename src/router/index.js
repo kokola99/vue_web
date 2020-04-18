@@ -5,6 +5,8 @@ import Personal0 from '../components/Personal0.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue' 
 import Join from'../components/Join.vue'
+import alltask from'../components/alltask.vue'
+import found from'../components/found.vue'
 Vue.use(Router) 
 export default new Router({
   routes: [
@@ -34,6 +36,16 @@ export default new Router({
       path:'/join',
       name:'Join',
       component:Join
+    },
+    {
+      path:'/alltask',
+      name:'alltask',
+      component:alltask
+    },
+    {
+      path:'/found',
+      name:'found',
+      component:found
     }
   ],
   //mode: "history",

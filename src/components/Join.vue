@@ -4,14 +4,14 @@
 
    <el-header height="100px">
      <img src="@/assets/logo.png":width='144' height="100">
-     <el-button type="info" @click="logout">张三  注销</el-button>
+     <el-button type="info" @click="logout">wzt  注销</el-button>
    </el-header>
 
    <el-container >
      <el-aside width="300px">
          <el-button class="left_menu" type="text" icon="el-icon-back"></el-button>
          <br>
-         <el-button class="left_menu" type="text" icon="el-icon-loading">进行中项目</el-button>
+         <el-button class="left_menu" type="text" icon="el-icon-loading">进行的项目</el-button>
          <br>
          <el-button class="left_menu" type="text" icon="el-icon-finished">已完成项目</el-button>
          <br>
@@ -47,7 +47,6 @@
                 log = 0;
                 if(log==0)
                 this.$alert('您已注销登录！', 'Logout', {
-                    confirmButtonText: '确定',
                     callback: action => {
                     this.$message({
                     type: 'info',
