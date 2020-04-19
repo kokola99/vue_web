@@ -3,7 +3,7 @@
  <el-container>
 
    <el-header height="100px">
-     <img src="@/assets/logo.png":width='144' height="100">
+     <img src="@/assets/logo.png" :width='144' height="100">
      <el-button type="info" @click="logout">wzt  注销</el-button>
    </el-header>
 

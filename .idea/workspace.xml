@@ -2,22 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff97343f-53e2-43a2-87bd-854fcda74c00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vue_web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/1.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/joined.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/myproject.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/newtask.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/3357a12f0f63629999082cac81b746cc.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/3357a12f0f63629999082cac81b746cc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/97eead991578bf7fbc9ee9584fac28e7.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/97eead991578bf7fbc9ee9584fac28e7.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bbf2e56ca3eb966b7761e5324bcc00ff.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bbf2e56ca3eb966b7761e5324bcc00ff.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0e39a2cf2c1349159fb8d78a3202bd25.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0e39a2cf2c1349159fb8d78a3202bd25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1712d40d16dd3854cc488af88e48f520.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1712d40d16dd3854cc488af88e48f520.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/201754f9173909a247669f35168a9ebf.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/201754f9173909a247669f35168a9ebf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2bdea9fd8db728e1099d70fbc55dfb2d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2bdea9fd8db728e1099d70fbc55dfb2d.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3a1046af1709aa6e827faa8619022594.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3a1046af1709aa6e827faa8619022594.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/646ffba715c08a2d2cc9f02aea8b595a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/646ffba715c08a2d2cc9f02aea8b595a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/75834ae2d4a68b3a9f59d8c583c5731c.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/75834ae2d4a68b3a9f59d8c583c5731c.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7c1e6a2503a49363c3ef0cad20263b99.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7c1e6a2503a49363c3ef0cad20263b99.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9e5e85c04494dd9f3f8229327a337a88.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9e5e85c04494dd9f3f8229327a337a88.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b729a28b7e7f9ce8c08e83580cdd64c2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b729a28b7e7f9ce8c08e83580cdd64c2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d7d5dba21cabfb36b0661ab118e15747.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d7d5dba21cabfb36b0661ab118e15747.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f8e6a6e7b9d5871ae72a2cb9221132ba.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f8e6a6e7b9d5871ae72a2cb9221132ba.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.stats-serve.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.stats-serve.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Join.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Join.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alltask copy 2.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alltask.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/found.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/found.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/test.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +40,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1afoz6dtiwPqpyBojF4ZWvigssr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -44,7 +59,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
     <configuration>$PROJECT_DIR$/../.subversion</configuration>
@@ -57,20 +72,41 @@
       <option name="presentableId" value="Default" />
       <updated>1587136268891</updated>
       <workItem from="1587136271036" duration="1458000" />
+      <workItem from="1587228406620" duration="1964000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="637" y="336" key="EditFileWatcherDialog" timestamp="1587228661985">
+      <screen x="54" y="23" width="1866" height="1057" />
+    </state>
+    <state x="637" y="336" key="EditFileWatcherDialog/54.23.1866.1057@54.23.1866.1057" timestamp="1587228661985" />
     <state x="831" y="269" key="RollbackChangesDialog" timestamp="1587177054040">
       <screen x="52" y="23" width="1868" height="1057" />
     </state>
     <state x="831" y="269" key="RollbackChangesDialog/52.23.1868.1057@52.23.1868.1057" timestamp="1587177054040" />
-    <state x="488" y="190" key="SettingsEditor" timestamp="1587136623765">
-      <screen x="54" y="23" width="1866" height="1057" />
+    <state x="486" y="190" key="SettingsEditor" timestamp="1587265545925">
+      <screen x="52" y="23" width="1868" height="1057" />
     </state>
-    <state x="488" y="190" key="SettingsEditor/54.23.1866.1057@54.23.1866.1057" timestamp="1587136623765" />
+    <state x="486" y="190" key="SettingsEditor/52.23.1868.1057@52.23.1868.1057" timestamp="1587265545925" />
+    <state x="488" y="190" key="SettingsEditor/54.23.1866.1057@54.23.1866.1057" timestamp="1587228664507" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/newtask.vue</url>
+          <line>20</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
