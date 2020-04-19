@@ -9,6 +9,7 @@ import found from "../components/found.vue";
 import joined from "../components/joined.vue";
 import newtask from "../components/newtask.vue";
 import myproject from "../components/myproject.vue";
+import Project from "../components/Project.vue";
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -58,6 +59,11 @@ export default new Router({
       path: "/found",
       name: "found",
       component: found
+    },
+    {
+      path:"/project",
+      name:"Project",
+      component: Project
     }
   ]
   //mode: "history",
