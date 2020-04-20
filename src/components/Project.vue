@@ -30,8 +30,8 @@
      <el-main>
         <p>全部项目</p>
         <div class="button">
-        <el-button class="add" type="primary" icon="el-icon-plus" >添加</el-button>
-        <el-button class="my" type="primary">我的任务</el-button>
+        <el-button class="add" type="primary" @click="addproj" icon="el-icon-plus" >添加</el-button>
+        <el-button class="my" type="primary" @click="mytask">我的任务</el-button>
         </div>
         <el-table :data="tableList"  height="680px" style="width: 100%">
             <el-table-column property="number" label="任务编号" width="100" height="50" backgroung></el-table-column>
@@ -53,6 +53,37 @@
               :total="files_count"
             ></el-pagination>
         </div>
+
+        <el-dialog style="margin: auto; width:1000px"
+         title="新添任务"
+          :visible.sync="dialogVisible"
+          width="60%"
+        :before-close="handleClose">
+        <el-form ref="form" :model="form" label-width="80px">
+          <el-form-item label="任务简述">
+            <el-input v-model="form.intro"></el-input>
+          </el-form-item>
+          <el-form-item label="负责人">
+            <el-select v-model="form.leader" placeholder="请选择负责人">
+              <el-option label="张永乐" value="zyl"></el-option>
+              <el-option label="孙黄青" value="slq"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="截止日期">
+            <el-date-picker type="date" placeholder="选择日期" 
+            v-model="form.date" style="width: 100%;"></el-date-picker>
+          </el-form-item>
+          <el-form-item label="任务要求">
+            <el-input type="textarea" v-model="form.desc"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button @click="dialogVisible = false">取消</el-button>
+            <el-button type="primary" @click="onSubmit" 
+            style="margin-left:50px;">立即添加</el-button>
+          </el-form-item>
+        </el-form>
+        </el-dialog>
+
      </el-main>
    </el-container>
  </el-container>
@@ -67,12 +98,19 @@
       username: "李四",
       data(){
           return {
+                dialogVisible: false,
                 loading:true,
                 currentPage:1,
                 pagesize:10,
                 files_count:5,
                 fileList:[],
                 searchFile:"",
+        form: {
+          intro: '',
+          leader: '',
+          date: '',
+          desc: ''
+        },
           tableList: [{
       "number": "01",
       "describe": "这是任务1",
@@ -212,7 +250,6 @@
       /*mounted() {
             },
         和后端链接*/
-
         methods: 
         {
             logout() 
@@ -254,7 +291,19 @@
           this.loading = false;
         })
         .catch({});
-    }      
+    },
+    //添加项目的按钮
+    addproj()
+    {
+      this.dialogVisible = true;
+    },
+      onSubmit() {
+        alert('submit!');
+      },
+    mytask()
+    {
+      this.$router.push('/toaccept');
+    },     
         }
   }
 </script>
