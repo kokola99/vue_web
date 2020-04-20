@@ -10,6 +10,8 @@ import joined from "../components/joined.vue";
 import newtask from "../components/newtask.vue";
 import myproject from "../components/myproject.vue";
 import Project from "../components/Project.vue";
+import AllPage from "../components/AllPage.vue";
+import ToAccept from "../components/ToAccept.vue";
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -64,7 +66,17 @@ export default new Router({
       path:"/project",
       name:"Project",
       component: Project
-    }
+    },
+    {
+      path:"/allpage",
+      name:"AllPage",
+      component: AllPage
+    }, 
+    {
+      path:"/toaccept",
+      name:"ToAccept",
+      component: ToAccept
+    },       
   ]
   //mode: "history",
   //base: '//',
