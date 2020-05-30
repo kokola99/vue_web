@@ -12,6 +12,7 @@ import myproject from "../components/myproject.vue";
 import Project from "../components/Project.vue";
 import AllPage from "../components/AllPage.vue";
 import ToAccept from "../components/ToAccept.vue";
+import Team from "../components/Team.vue";
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -21,6 +22,11 @@ export default new Router({
       path: "/personal",
       name: "Personal",
       component: Personal
+    },
+    {
+      path: "/team",
+      name: "Team",
+      component: Team
     },
     {
       path: "/login",
