@@ -10,8 +10,8 @@
             </div>
           <!-- 样例菜单 -->
          
-          <el-menu
-            :default-active="activeIndex1"
+<!--         <el-menu
+            :default-active="activeIndex"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect">
@@ -28,9 +28,9 @@
                     <el-menu-item index="2-4-3">选项3</el-menu-item>
                 </el-submenu>
             </el-submenu>
-            <!--<el-menu-item index="3" disabled></el-menu-item>-->
+            <el-menu-item index="3" disabled></el-menu-item>
             <el-menu-item index="3"><a href="https://www.baidu.com" target="_blank">我的项目</a></el-menu-item>
-        </el-menu>
+        </el-menu>-->
         <el-button type="info" @click="login">立即登录</el-button>
         <el-button type="info" @click="doRegister">马上注册</el-button>
         </el-header>
@@ -157,7 +157,7 @@ export default {
 /*头部风格*/
 .el-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 }

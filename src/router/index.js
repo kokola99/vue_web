@@ -13,13 +13,11 @@ import Project from "../components/Project.vue";
 import AllPage from "../components/AllPage.vue";
 import ToAccept from "../components/ToAccept.vue";
 import Team from "../components/Team.vue";
-<<<<<<< HEAD
 import basis from "../components/basis.vue";
 import basisleader from "../components/basisleader.vue";
-=======
->>>>>>> 5c64f468d5f06e15ccb89560918102670d634f8b
 Vue.use(Router);
-export default new Router({
+
+const router = new Router({
   routes: [
     { path: "/", redirect: "/personal0" },
     /*personal0是一开始的最初页面，页面里面右上角是登陆注册*/
@@ -87,7 +85,6 @@ export default new Router({
       path:"/toaccept",
       name:"ToAccept",
       component: ToAccept
-<<<<<<< HEAD
     },  
     {
       path:"/basis",
@@ -99,10 +96,17 @@ export default new Router({
       name:"basisleader",
       component: basisleader
     },
-=======
-    },       
->>>>>>> 5c64f468d5f06e15ccb89560918102670d634f8b
   ]
   //mode: "history",
   //base: '//',
 });
+router.beforeEach((to,from,next) => {
+  //to将要访问路径
+  //from从哪个路径跳转而来
+  //next是一个函数，表示放行
+  if(to.path === '/login') return next()
+  const accountstr = window.sessionStorage.getItem('account')
+  if(!accountstr) return next('/login')
+  next()
+})
+export default router

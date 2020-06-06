@@ -6,8 +6,8 @@
         
         <el-form ref="loginForm" :model="user" status-icon label-width="80px">
           
-          <el-form-item prop="applicantPhone" label="手机号">
-            <el-input prefix-icon="iconfont iconshouji" v-model="user.applicantPhone" placeholder="请输入手机号"></el-input>
+          <el-form-item prop="tel" label="手机号">
+            <el-input prefix-icon="iconfont iconshouji" v-model="user.tel" placeholder="请输入手机号"></el-input>
           </el-form-item>
           <el-form-item prop="username" label="用户名">
             <el-input prefix-icon="iconfont iconyonghu1" v-model="user.username" placeholder="请输入用户名"></el-input>
@@ -32,18 +32,20 @@
  
 <script>
 import axios from "axios";
+import qs from 'qs';
 export default {
   name: "login",
   data() {
     return {
       user: {
-        username: "",
-        email: "",
-        password: ""
+        tel: "123456789",
+        username: "abcd",
+        email: "abcd@test.com",
+        password: "12345"
       },
     };
   },
-  created() {
+  created() {//来发起当前组件的数据请求
     // console.log($);
     // console.log("1111");
   },
@@ -63,22 +65,21 @@ export default {
           this.$message.error("请输入密码！");
           return;
         } else {
-          this.$router.push({ path: "/" }); //无需向后台提交数据，方便前台调试
-          axios
-            .post("/register/", {
-              name: this.user.username,
-              email: this.user.email,
-              password: this.user.password
-            })
-            .then(res => {
-              // console.log("输出response.data", res.data);
-              // console.log("输出response.data.status", res.data.status);
-              if (res.data.status === 200) {
-                this.$router.push({ path: "/" });
-              } else {
-                alert("您输入的用户名已存在！");
-              }
-            });
+          //this.$router.push({ path: "/" }); //无需向后台提交数据，方便前台调试
+          this.$refs.loginForm.validate((valid) => {
+        if (!valid) return;
+       const result = this.$http.post('/user/new', qs.stringify(this.user)).then((res)=>{ 
+         if (res.data.errorCode == 0) 
+         {
+          this.$message({
+            showClose: true,
+            message: '注册成功!',
+            type: 'success'
+          });
+          this.$router.push('/')
+         };
+       })
+      });
         }
       }
     }

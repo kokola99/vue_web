@@ -11,7 +11,7 @@
           <!-- 样例菜单 -->
          
           <el-menu
-            :default-active="activeIndex1"
+            :default-active="activeIndex"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect">
@@ -110,7 +110,7 @@ export default {
     logout: function () {
       this.$confirm('确认退出登陆?', '提示', {})
         .then(() => {
-          sessionStorage.removeItem('user');
+          window.sessionStorage.clear();
           this.$router.push('/login');
         })
         .catch(() => { });

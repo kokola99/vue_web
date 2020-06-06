@@ -3,12 +3,12 @@
     <div class="login-wrap">
       <h3><pre><center>登录</center></pre></h3>
       <el-row type="flex" justify="center">
-        <el-form ref="loginForm" :model="user" :rules="loginrules" status-icon label-width="80px">
-          <el-form-item prop="username" label="账号">
-            <el-input prefix-icon="iconfont iconyonghu" v-model="user.username" placeholder="请输入账号" ></el-input>
+        <el-form ref="loginFormRef" :model="loginForm" :rules="loginrules" status-icon label-width="80px">
+          <el-form-item prop="account" label="账号">
+            <el-input prefix-icon="iconfont iconyonghu" v-model="loginForm.account" placeholder="请输入账号" ></el-input>
           </el-form-item>
           <el-form-item id="password" prop="password" label="密码">
-            <el-input prefix-icon="iconfont iconmima" v-model="user.password" show-password placeholder="请输入密码"></el-input>
+            <el-input prefix-icon="iconfont iconmima" v-model="loginForm.password" show-password placeholder="请输入密码"></el-input>
           </el-form-item>
           <el-button type="primary" icon="el-icon-upload" @click="doLogin()">登 录</el-button>
           <el-form-item>
@@ -23,25 +23,26 @@
 </template>
 <script>
 import axios from "axios";//通过axios进行http请求
+import qs from 'qs';
 export default {
   name: "login",
   data() {
     return {
       //登陆表单的数据绑定对象
-      user: {
-        username: "",
+      loginForm: {
+        account: "test@yeah.net",
         password: ""
       },
       loginrules: {
         //验证账号是否合法
-        username: [
+        account: [
           { required: true, message: '请输入账号', trigger: 'blur' },
-          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+          { min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur' }
         ],
         //验证密码是否合法
         password: [
           { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+          { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
         ]
       }
     };
@@ -49,30 +50,24 @@ export default {
   created() {},
   methods: {
     doLogin() {
-      if (!this.user.username) {
-        this.$message.error("请输入账号！");
-        return;
-      } else if (!this.user.password) {
-        this.$message.error("请输入密码！");
-        return;
-      } else {
-        //校验用户名和密码是否正确;
-        this.$router.push({ path: "/personal" });
-        axios
-          .post("/login/", {
-            name: this.user.username,
-            password: this.user.password
-          })
-          .then(res => {
-            // console.log("输出response.data.status", res.data.status);
-            if (res.data.status === 200) {
-              this.$router.push({ path: "/personal" });
-            } else {
-              alert("您输入的账号或密码错误！");
-            }
+      const that = this;
+      this.$refs.loginFormRef.validate((valid) => {
+        if (!valid) return;
+       const {errorCode: res} = that.$http.post('/user/login', qs.stringify(this.loginForm)).then((res)=>{ 
+         if (res.data.errorCode == 0) 
+         {
+          this.$message({
+            showClose: true,
+            message: '登录成功!',
+            type: 'success'
           });
-      }
-    }
+          this.$router.push('/personal')
+          window.sessionStorage.setItem("account", this.loginForm.account)
+         }
+         else return this.$message.error("登录失败");
+       })
+      });
+    },
   }
 };
 </script>
