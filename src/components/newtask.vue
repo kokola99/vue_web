@@ -19,11 +19,12 @@
                     <br>
                 </el-aside>
                 <el-main>
-                    <el-breadcrumb separator-class="el-icon-arrow-right">
+                    <el-breadcrumb separator-class="el-icon-arrow-right" >
                         <el-breadcrumb-item :to="{ path: '/' }">全部项目</el-breadcrumb-item>
                         <el-breadcrumb-item :to="{ path: '/' }">我创建的项目</el-breadcrumb-item>
                     </el-breadcrumb>
-                    <el-form ref="form" :model="form" label-width="80px">
+
+                    <el-form ref="form" :model="form" label-width="80px" border-radius: 0px>
                         <el-form-item label="活动名称">
                             <el-input v-model="form.name"></el-input>
                         </el-form-item>
@@ -61,6 +62,7 @@
                             <el-button>取消</el-button>
                         </el-form-item>
                     </el-form>
+
                 </el-main>
             </el-container>
         </el-container>

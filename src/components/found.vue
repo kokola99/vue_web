@@ -23,10 +23,11 @@
                         <el-breadcrumb-item :to="{ path: '/' }">全部项目</el-breadcrumb-item>
                         <el-breadcrumb-item :to="{ path: '/' }">我创建的项目</el-breadcrumb-item>
                     </el-breadcrumb>
-                    <el-row :gutter="20">
-                        <el-col :span="6">
+                    <el-divider ></el-divider>
+                    <el-row :gutter="5" type="flex" justify="space-between">
+                        <el-col :span="6" class="box">
                             <div class="grid-content bg-purple">
-                                <el-card class="box-card">
+                                <el-card class="box-card" >
                                     <div slot="header" class="clearfix">
                                         <span>项目名称</span>
                                         <el-button style="float: right; padding: 3px 0" type="text">查看详情</el-button>
@@ -106,7 +107,7 @@
     }
 
     }
-    
+
     .el-col {
         border-radius: 4px;
     }
@@ -114,7 +115,12 @@
     .bg-purple-dark {
         background: #99a9bf;
     }
-
+    .box {
+        height: 80%;
+        /*overflow-y: auto;*/
+        display: flex;
+        flex-direction: column;
+    }
     .bg-purple {
         background: #d3dce6;
     }
